@@ -63,7 +63,7 @@ class Row extends React.Component {
           <div className={styles.Row__Slidebuttons__Combo}>
             <button
               className={styles.Row__Slidebutton}
-              onClick={() => {handleLeftSlide(this.rowImages)}}
+              onClick={() => { handleLeftSlide(this.rowImages) }}
             >
               &lt;
             </button>
@@ -81,6 +81,7 @@ class Row extends React.Component {
               <div key={result.id} className={styles.Row__Posterimage__Wrapper}>
                 {/* <div className={styles.Row__Posterimage__Overlay}></div> */}
                 <img
+                  loading="lazy"
                   className={
                     this.props.isBiggerRow
                       ? styles.Row__Posterimage
