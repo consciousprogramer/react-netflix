@@ -1,0 +1,70 @@
+.Banner {
+  position: relative;
+  background-position: center center;
+  background-size: cover;
+  height: 448px;
+  /* margin-bottom: -30px; */
+}
+.Banner__Heading {
+  color: white;
+  font-weight: bold;
+  font-size: 3rem;
+  display: block;
+  white-space: nowrap;
+  overflow-x: scroll;
+  width: 95vw;
+}
+.Banner__Heading::-webkit-scrollbar {
+  display: none;
+}
+.Banner__Content {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  max-width: 400px;
+  height: auto;
+  margin-left: 1rem;
+  margin: auto 1rem;
+}
+.Banner__Buttons {
+  margin: 0.6rem 0;
+}
+.Banner__Button {
+  cursor: pointer;
+  color: #fff;
+  outline: none;
+  border: none;
+  font-weight: 700;
+  border-radius: 0.2vw;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  margin-right: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  background-color: rgba(51, 51, 51, 0.5);
+}
+.Banner__Button:hover {
+  color: #000;
+  background-color: #e6e6e6;
+  transition: all 0.2s;
+}
+.Banner__Overview {
+  color: white;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+.GradientBox {
+  position: absolute;
+  bottom: 0;
+  height: 80px;
+  width: 100%;
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0), rgb(17, 17, 17));
+}
+
+@media only screen and (max-width: 500px){
+  .Banner__Heading{
+    word-wrap: break-word;
+    white-space: normal;
+    font-size: 2.5rem;
+  }
+}
