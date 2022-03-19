@@ -1,33 +1,32 @@
-import React from "react";
-import Logo from "../../assets/list.svg";
-import styles from "./Nav.module.css";
-import foutHumans from '../../assets/logo.png';
+import React from "react"
+import Logo from "../../assets/list.svg"
+import styles from "./Nav.module.css"
 
 class Nav extends React.Component {
   constructor(props) {
-    super(props);
+    super(props)
     this.state = {
       show: true,
-    };
-    this.nav = React.createRef();
+    }
+    this.nav = React.createRef()
   }
 
   handleScroll = () => {
     if (window.scrollY <= 100) {
-      this.nav.current.style.backgroundColor = "transparent";
-      console.log("[Less Than 100]");
+      this.nav.current.style.backgroundColor = "transparent"
+      console.log("[Less Than 100]")
     } else {
-      this.nav.current.style.backgroundColor = "#111";
-      console.log("[More Than 100]");
+      this.nav.current.style.backgroundColor = "#111"
+      console.log("[More Than 100]")
     }
-  };
+  }
 
   componentDidMount() {
-    window.addEventListener("scroll", this.handleScroll);
+    window.addEventListener("scroll", this.handleScroll)
   }
 
   componentWillUnmount() {
-    window.removeEventListener("scroll", this.handleScroll);
+    window.removeEventListener("scroll", this.handleScroll)
   }
 
   render() {
@@ -41,13 +40,16 @@ class Nav extends React.Component {
           <a href="#">Premium</a>
           <a href="#">Top Rated</a>
         </div>
-        <a className={styles.Nav__Login}> <img src={foutHumans} alt="" width="150px" /> </a>
+        <a className={styles.Nav__Login}>
+          {" "}
+          <span className={styles.Nav__Login__child}>Rohit</span>{" "}
+        </a>
         <a href="#" className={styles.Nav__Hamburger}>
           <img src={Logo} className={styles.Nav__Hamburger__Image} />
         </a>
       </nav>
-    );
+    )
   }
 }
 
-export default Nav;
+export default Nav
